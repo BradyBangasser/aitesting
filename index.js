@@ -53,8 +53,8 @@ async function app() {
     document.getElementById('f8').addEventListener('click', () => addExample('f8'));
     document.getElementById('f9').addEventListener('click', () => addExample('f9'));
     document.getElementById('f10').addEventListener('click', () => addExample('f10'));
-    document.getElementById('brady').addEventListener('click', () => addExample('m10'));
-    document.getElementById('save').addEventListener('click', () => save());
+    document.getElementById('brady').addEventListener('click', () => addExample('s11'));
+    document.getElementById('save').addEventListener('click', () => {await net.save()});
     while (true) {
       if (classifier.getNumClasses() > 0) {
         const img = await webcam.capture();
