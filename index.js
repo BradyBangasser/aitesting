@@ -1,4 +1,5 @@
 var net
+const urls = []
 const webcamElement = document.getElementById('webcam');
 const classifier = knnClassifier.create();
 function save(model) {
@@ -31,7 +32,11 @@ async function app() {
       // Dispose the tensor to release the memory.
       img.dispose();
     };
-  
+    function changeImg() {
+      const url = urls[Math.floor(Math.random() * urls.length)]
+      document.getElementById("myImageId").src=url;
+      return document.getElementById("img")
+    }
     // When clicking a button, add an example for that class.
     document.getElementById('m1').addEventListener('click', () => addExample('m1'));
     document.getElementById('m2').addEventListener('click', () => addExample('m2'));
@@ -57,7 +62,7 @@ async function app() {
     document.getElementById('save').addEventListener('click', () => {await net.save()});
     while (true) {
       if (classifier.getNumClasses() > 0) {
-        const img = await webcam.capture();
+        const img = changeImg();
   
         // Get the activation from mobilenet from the webcam.
         const activation = net.infer(img, 'conv_preds');
