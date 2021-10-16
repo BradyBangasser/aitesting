@@ -14,13 +14,12 @@ async function app() {
   
     // Create an object from Tensorflow.js data API which could capture image 
     // from the web camera as Tensor.
-    const webcam = await tf.data.webcam(webcamElement);
   
     // Reads an image from the webcam and associates it with a specific class
     // index.
     const addExample = async classId => {
       // Capture an image from the web camera.
-      const img = await webcam.capture();
+      const img = changeImg()
   
       // Get the intermediate activation of MobileNet 'conv_preds' and pass that
       // to the KNN classifier.
@@ -34,7 +33,7 @@ async function app() {
     };
     function changeImg() {
       const url = urls[Math.floor(Math.random() * urls.length)]
-      document.getElementById("myImageId").src=url;
+      document.getElementById("img").src=url;
       return document.getElementById("img")
     }
     // When clicking a button, add an example for that class.
