@@ -31,11 +31,6 @@ async function app() {
       // Dispose the tensor to release the memory.
       img.dispose();
     };
-    function changeImg() {
-      const url = urls[Math.floor(Math.random() * urls.length)]
-      document.getElementById("img").src=url;
-      return document.getElementById("img")
-    }
     // When clicking a button, add an example for that class.
     document.getElementById('m1').addEventListener('click', () => addExample('m1'));
     document.getElementById('m2').addEventListener('click', () => addExample('m2'));
@@ -80,5 +75,10 @@ async function app() {
   
       await tf.nextFrame();
     }
+  }
+  function changeImg() {
+    const url = urls[Math.floor(Math.random() * urls.length)]
+    document.getElementById("img").src=url;
+    return document.getElementById("img")
   }
   app();
