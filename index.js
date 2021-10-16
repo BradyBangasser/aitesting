@@ -9,7 +9,7 @@ function changeImg() {
   console.log('here')
   const url = urls[Math.floor(Math.random() * urls.length)]
   document.getElementById("img").src=url;
-  return document.getElementById("img")
+  return url
 }
 async function app() {
     console.log('Loading mobilenet..');
@@ -58,6 +58,7 @@ async function app() {
     document.getElementById('f8').addEventListener('click', () => addExample('f8'));
     document.getElementById('f9').addEventListener('click', () => addExample('f9'));
     document.getElementById('f10').addEventListener('click', () => addExample('f10'));
+    document.getElementById('dawg').addEventListener('click', () => null);
     document.getElementById('brady').addEventListener('click', () => addExample('s11'));
     document.getElementById('save').addEventListener('click', async () => {await net.save()});
     while (true) {
