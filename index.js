@@ -53,7 +53,7 @@ async function app() {
     document.getElementById('f9').addEventListener('click', () => addExample('f9'));
     document.getElementById('f10').addEventListener('click', () => addExample('f10'));
     document.getElementById('brady').addEventListener('click', () => addExample('s11'));
-    document.getElementById('save').addEventListener('click', () => {await net.save()});
+    document.getElementById('save').addEventListener('click', async () => {await net.save()});
     while (true) {
       if (classifier.getNumClasses() > 0) {
         const img = changeImg();
