@@ -5,6 +5,11 @@ const classifier = knnClassifier.create();
 function save(model) {
   model.save()
 }
+function changeImg() {
+  const url = urls[Math.floor(Math.random() * urls.length)]
+  document.getElementById("img").src=url;
+  return document.getElementById("img")
+}
 async function app() {
     console.log('Loading mobilenet..');
   
@@ -76,9 +81,4 @@ async function app() {
       await tf.nextFrame();
     }
   }
-  function changeImg() {
-    const url = urls[Math.floor(Math.random() * urls.length)]
-    document.getElementById("img").src=url;
-    return document.getElementById("img")
-  }
-  app();
+app();
