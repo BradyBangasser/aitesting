@@ -1,5 +1,5 @@
 var net
-const urls = []
+const urls = ['https://i.imgur.com/HBrB8p0', 'https://imgur.com/UXN9GD8', 'https://imgur.com/e1FM4b8']
 const webcamElement = document.getElementById('webcam');
 const classifier = knnClassifier.create();
 function save(model) {
