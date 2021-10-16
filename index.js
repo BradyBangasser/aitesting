@@ -58,7 +58,7 @@ async function app() {
     document.getElementById('f8').addEventListener('click', () => addExample('f8'));
     document.getElementById('f9').addEventListener('click', () => addExample('f9'));
     document.getElementById('f10').addEventListener('click', () => addExample('f10'));
-    document.getElementById('dawg').addEventListener('click', () => null);
+    document.getElementById('dawg').addEventListener('click', () => changeImg());
     document.getElementById('brady').addEventListener('click', () => addExample('s11'));
     document.getElementById('save').addEventListener('click', async () => {await net.save()});
     while (true) {
