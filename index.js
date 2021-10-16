@@ -6,6 +6,7 @@ function save(model) {
   model.save()
 }
 function changeImg() {
+  console.log('here')
   const url = urls[Math.floor(Math.random() * urls.length)]
   document.getElementById("img").src=url;
   return document.getElementById("img")
