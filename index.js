@@ -6,7 +6,6 @@ function save(model) {
   model.save()
 }
 function changeImg() {
-  console.log('here')
   const url = urls[Math.floor(Math.random() * urls.length)]
   document.getElementById("img").src=url;
   return url
@@ -33,7 +32,7 @@ async function app() {
       const activation = net.infer(img, true);
   
       // Pass the intermediate activation to the classifier.
-      await classifier.addExample(activation, classId);
+      classifier.addExample(activation, classId);
   
       // Dispose the tensor to release the memory.
       img.dispose();
