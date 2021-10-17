@@ -25,14 +25,14 @@ async function app() {
     // index.
     const addExample = async classId => {
       // Capture an image from the web camera.
-      const img = changeImg()
+      const img = document.getElementById('img')
   
       // Get the intermediate activation of MobileNet 'conv_preds' and pass that
       // to the KNN classifier.
       const activation = net.infer(img, true);
   
       // Pass the intermediate activation to the classifier.
-      classifier.addExample(activation, classId);
+      await classifier.addExample(activation, classId);
   
       // Dispose the tensor to release the memory.
       img.dispose();
