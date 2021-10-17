@@ -26,6 +26,7 @@ async function app() {
     const addExample = async classId => {
       // Capture an image from the web camera.
       const img = document.getElementById('img')
+      console.log(img)
   
       // Get the intermediate activation of MobileNet 'conv_preds' and pass that
       // to the KNN classifier.
