@@ -35,7 +35,7 @@ async function app() {
       classifier.addExample(activation, classId);
   
       // Dispose the tensor to release the memory.
-      img.dispose();
+      //img.dispose();
     };
     // When clicking a button, add an example for that class.
     document.getElementById('m1').addEventListener('click', () => addExample('m1'));
@@ -63,6 +63,7 @@ async function app() {
     document.getElementById('save').addEventListener('click', async () => {await net.save()});
     while (true) {
       if (classifier.getNumClasses() > 0) {
+        changeImg()
         const img = document.getElementById('img');
   
         // Get the activation from mobilenet from the webcam.
