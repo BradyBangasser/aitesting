@@ -1,6 +1,5 @@
 var net
-const urls = ['https://i.imgur.com/HBrB8p0', 'https://i.imgur.com/UXN9GD8.jpeg', 'https://i.imgur.com/e1FM4b8.jpeg', 'https://i.imgur.com/wuPCAty.jpeg', 'https://i.imgur.com/XCBF317.jpeg', 'https://i.imgur.com/J7qY2ea.jpeg', 'https://i.imgur.com/Kv1faYM.jpeg']
-const webcamElement = document.getElementById('webcam');
+const urls = ['./images/Bradyjay.jpg', 'https://i.imgur.com/HBrB8p0', 'https://i.imgur.com/UXN9GD8.jpeg', 'https://i.imgur.com/e1FM4b8.jpeg', 'https://i.imgur.com/wuPCAty.jpeg', 'https://i.imgur.com/XCBF317.jpeg', 'https://i.imgur.com/J7qY2ea.jpeg', 'https://i.imgur.com/Kv1faYM.jpeg']
 const classifier = knnClassifier.create();
 function save(model) {
   model.save()
