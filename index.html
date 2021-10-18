@@ -2,14 +2,12 @@
 <html>
   <head>
     <!-- Load the latest version of TensorFlow.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
   </head>
   <body>
     <div id="console"></div>
-    <!-- Add an image that we will use to test -->
-    <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
-    <!-- Load index.js after the content of the page -->
     <br>
     <button id="m1">M1</button>
     <button id="m2">M2</button>
