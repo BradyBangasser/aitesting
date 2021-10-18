@@ -63,7 +63,7 @@ async function app() {
     document.getElementById('save').addEventListener('click', async () => {await net.save()});
     while (true) {
       if (classifier.getNumClasses() > 0) {
-        const img = changeImg();
+        const img = document.getElementById('img');
   
         // Get the activation from mobilenet from the webcam.
         const activation = net.infer(img, 'conv_preds');
@@ -77,7 +77,7 @@ async function app() {
         `;
   
         // Dispose the tensor to release the memory.
-        img.dispose();
+        //img.dispose();
       }
   
       await tf.nextFrame();
